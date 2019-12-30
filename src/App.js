@@ -8,6 +8,8 @@ import FullWidthGrid from "./components/FullWidthGrid"
 import Cookie from "./components/Cookies"
 import ScrollToTop from './components/ScrollToTop'
 import Galeria from "./components/Galeria"
+import ContactForm from "./components/ContactForm"
+import Footer from "./components/Footer"
 
 
 function App() {
@@ -22,7 +24,9 @@ function App() {
           </LazyHero>
           <FullWidthGrid />
           <Galeria />
+          <ContactForm />
         </Container>
+        <Footer />
         <Cookie />
         <ScrollToTop />
         {/* ... */}

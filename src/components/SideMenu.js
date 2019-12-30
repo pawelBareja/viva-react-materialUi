@@ -10,6 +10,31 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import MenuIcon from '@material-ui/icons/Menu';
+import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
+import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
+import FlightTakeoffIcon from '@material-ui/icons/FlightTakeoff';
+import LocalOfferIcon from '@material-ui/icons/LocalOffer';
+import ImageIcon from '@material-ui/icons/Image';
+
+
+const icons = [
+    {
+        icon: <PlayCircleOutlineIcon />
+    },
+    {
+        icon: <AssignmentIndIcon />
+    },
+    {
+        icon: <FlightTakeoffIcon />
+    },
+    {
+        icon: <LocalOfferIcon />
+    },
+    {
+        icon: <ImageIcon />
+    },
+]
+
 
 const useStyles = makeStyles({
     list: {
@@ -45,19 +70,22 @@ export default function SwipeableTemporaryDrawer() {
             onKeyDown={toggleDrawer(side, false)}
         >
             <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+                {['Start', 'O mnie', 'Viva Polonia', 'Oferta', 'Galeria'].map((text, index) => (
                     <ListItem button key={text}>
-                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+                        {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
+
+                        <span>{icons[index].icon}</span>
                         <ListItemText primary={text} />
+                        <span>{icons[index].icon}</span>
                     </ListItem>
                 ))}
             </List>
             <Divider />
             <List>
-                {['All mail', 'Trash', 'Spam'].map((text, index) => (
+                {['Kontakt'].map((text, index) => (
                     <ListItem button key={text}>
-                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                         <ListItemText primary={text} />
+                        <ListItemIcon><MailIcon /></ListItemIcon>
                     </ListItem>
                 ))}
             </List>
@@ -72,7 +100,7 @@ export default function SwipeableTemporaryDrawer() {
             onKeyDown={toggleDrawer(side, false)}
         >
             <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+                {['Inbox', 'Starred', 'Kontakt', 'Drafts'].map((text, index) => (
                     <ListItem button key={text}>
                         <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                         <ListItemText primary={text} />
@@ -81,7 +109,7 @@ export default function SwipeableTemporaryDrawer() {
             </List>
             <Divider />
             <List>
-                {['All mail', 'Trash', 'Spam'].map((text, index) => (
+                {['Kontakt'].map((text, index) => (
                     <ListItem button key={text}>
                         <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                         <ListItemText primary={text} />
