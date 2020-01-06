@@ -21,7 +21,7 @@ const buttonStyle = {
 
 export default function Przycisk(props) {
     const classes = useStyles();
-    const { buttonText, link, variant } = props;
+    const { buttonText, link, variant, color } = props;
 
 
     return (
@@ -30,10 +30,11 @@ export default function Przycisk(props) {
                 <Button style={buttonStyle}
                     variant={variant}
                     size="medium"
-                    color="primary"
+                    color={color}
                     aria-label="add"
                     className={classes.margin}
                     href={link}
+
                 >
                     <MailOutlineIcon className={classes.extendedIcon} />
                     {buttonText}
