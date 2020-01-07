@@ -80,7 +80,7 @@ function Galeria() {
     };
 
     return (
-        <div style={galleryStyle}>
+        <div id={"galeria"} style={galleryStyle}>
             <Gallery photos={photos} onClick={openLightbox} />
             <ModalGateway>
                 {viewerIsOpen ? (

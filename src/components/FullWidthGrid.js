@@ -5,6 +5,8 @@ import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import gridImage1 from "../assets/images/grid1.png";
+import logo from "../assets/images/logo.png";
+
 import gridImage2 from "../assets/images/grid2.jpg";
 import gridImage3 from "../assets/images/grid3.jpg";
 import Przycisk from "./Przycisk";
@@ -39,6 +41,14 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "column",
     justifyContent: "center"
   },
+  afterImage: {
+    width: "100%",
+    height: "auto",
+    maxWidth: "300px",
+    position: "absolute",
+    left: "0px",
+    top: "0px",
+  },
 }
 )
 );
@@ -48,8 +58,7 @@ const styleImage = {
   width: "100%",
   maxWidth: "300px",
   height: "auto",
-  margin: "0 auto"
-
+  margin: "0 auto",
 }
 
 
@@ -73,7 +82,7 @@ export default function FullWidthGrid() {
               </Paper>
             </Grid>
             <Grid item xs={12} md={8}>
-              <Paper className={classes.paper} style={{ backgroundColor: "#fcb042" }}>
+              <Paper id={"omnie"} className={classes.paper} style={{ backgroundColor: "#fcb042" }}>
                 <Typography variant="h3" component="h3" style={{ color: "#fff" }}>
                   Hola
             </Typography>
@@ -110,7 +119,7 @@ export default function FullWidthGrid() {
         <section>
           <Grid container spacing={3} className={classes.orderChange}>
             <Grid item xs={12} md={8}>
-              <Paper className={classes.paper}>
+              <Paper id={"viva"} className={classes.paper}>
                 <Typography variant="h3" component="h3">
                   Buen Viaje
             </Typography>
@@ -143,6 +152,7 @@ export default function FullWidthGrid() {
             <Grid item xs={12} md={4}>
               <Paper className={classes.paper}>
                 <img style={styleImage} src={gridImage2} />
+                <img className={classes.afterImage} src={logo} />
               </Paper>
             </Grid>
           </Grid>
@@ -152,7 +162,7 @@ export default function FullWidthGrid() {
         <section style={{ backgroundColor: "#fcb042" }}>
           <Grid container spacing={3}>
             <Grid item xs={12} md={4}>
-              <Paper className={classes.paper} style={{ backgroundColor: "#fcb042" }}>
+              <Paper id={"oferta"} className={classes.paper} style={{ backgroundColor: "#fcb042" }}>
                 <img style={styleImage} src={gridImage3} />
               </Paper>
             </Grid>

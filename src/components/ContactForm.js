@@ -41,7 +41,7 @@ export default function SignIn() {
     return (
         <Container component="main" maxWidth="md">
             <CssBaseline />
-            <div className={classes.paper}>
+            <div id={"kontakt"} className={classes.paper}>
                 <img src={logo} alt="logo" />
                 <Typography component="h3" variant="h4">
                     Skontaktuj się z nami
