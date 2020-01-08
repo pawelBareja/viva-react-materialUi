@@ -19,6 +19,9 @@ const useStyles = makeStyles(theme => ({
   title: {
     flexGrow: 1,
   },
+  logo: {
+    padding: "5px",
+  }
 }));
 
 export default function ButtonAppBar() {
@@ -26,13 +29,17 @@ export default function ButtonAppBar() {
 
   return (
     <div className={classes.root}>
+
       <AppBar position="sticky" color="#fff">
         <Toolbar>
+          <img src={logo} alt="logo" className={classes.logo} />
+
           {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu"> */}
-          <SideMenu />
+          <Button style={{ position: "absolute", right: "0" }}>
+            <SideMenu />
+          </Button>
           {/* </IconButton> */}
 
-          <img src={logo} alt="logo" />
         </Toolbar>
       </AppBar>
     </div>

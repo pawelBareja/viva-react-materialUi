@@ -41,7 +41,7 @@ export default function SignIn() {
     return (
         <Container component="main" maxWidth="md">
             <CssBaseline />
-            <div id={"kontakt"} className={classes.paper}>
+            <div id={"Kontakt"} className={classes.paper}>
                 <img src={logo} alt="logo" />
                 <Typography component="h3" variant="h4">
                     Skontaktuj się z nami
@@ -49,30 +49,87 @@ export default function SignIn() {
                 <Typography component="p" variant="p">
                     Masz pytania? Chętnie porozmawiamy o naszej ofercie. Napisz do nas.
         </Typography>
+
+
                 <form className={classes.form} noValidate>
-                    <TextField
-                        variant="outlined"
-                        margin="normal"
-                        required
-                        fullWidth
-                        id="email"
-                        label="Email Address"
-                        name="email"
-                        autoComplete="email"
-                        autoFocus
-                        maxWidth="md"
-                    />
-                    <TextField
-                        variant="outlined"
-                        margin="normal"
-                        required
-                        fullWidth
-                        name="password"
-                        label="Password"
-                        type="password"
-                        id="password"
-                        autoComplete="current-password"
-                    />
+
+                    <Grid container className={classes.root} spacing={2}>
+                        <Container component="main" maxWidth="xs">
+                            <TextField
+                                variant="outlined"
+                                margin="normal"
+                                required
+                                fullWidth
+                                id="email"
+                                label="Email Address"
+                                name="email"
+                                autoComplete="email"
+                                autoFocus
+                                maxWidth="md"
+                            />
+                            <TextField
+                                variant="outlined"
+                                margin="normal"
+                                required
+                                fullWidth
+                                name="password"
+                                label="Password"
+                                type="password"
+                                id="password"
+                                autoComplete="current-password"
+                            />
+                            <TextField
+                                variant="outlined"
+                                margin="normal"
+                                required
+                                fullWidth
+                                name="password"
+                                label="Password"
+                                type="password"
+                                id="password"
+                                autoComplete="current-password"
+                            />
+                        </Container>
+
+                        <Container component="main" maxWidth="xs">
+                            <TextField
+                                variant="outlined"
+                                margin="normal"
+                                required
+                                fullWidth
+                                id="email"
+                                label="Email Address"
+                                name="email"
+                                autoComplete="email"
+                                autoFocus
+                                maxWidth="md"
+                            />
+                            <TextField
+                                variant="outlined"
+                                margin="normal"
+                                required
+                                fullWidth
+                                name="password"
+                                label="Password"
+                                type="password"
+                                id="password"
+                                autoComplete="current-password"
+                            />
+                            <TextField
+                                variant="outlined"
+                                margin="normal"
+                                required
+                                fullWidth
+                                name="password"
+                                label="Password"
+                                type="password"
+                                id="password"
+                                autoComplete="current-password"
+                            />
+                        </Container>
+                    </Grid>
+
+
 
                     <FormControlLabel
                         control={<Checkbox value="remember" color="primary" />}
@@ -81,6 +138,8 @@ export default function SignIn() {
                         <span>
                             Akceptuję <a href="#" target="blank"> politykę prywatności</a> </span>
                     </label>
+
+
                     <Button
                         type="submit"
                         fullWidth

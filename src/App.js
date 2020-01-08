@@ -12,6 +12,7 @@ import ContactForm from "./components/ContactForm"
 import Footer from "./components/Footer"
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 import WaveBefore from "./components/WaveBefore"
+import Header from "./components/Header"
 
 
 
@@ -37,10 +38,11 @@ function App() {
         <CssBaseline />
         <Topbar />
         <div>
-          <Container id={"start"} maxWidth="xl" style={{ backgroundColor: "#fff" }}>
-            <LazyHero imageSrc={image}>
+          <Container id={"Start"} maxWidth="xl" style={{ backgroundColor: "#fff" }}>
+            <Header />
+            {/* <LazyHero imageSrc={image}>
               <h1>Generic Startup Hype Headline</h1>
-            </LazyHero>
+            </LazyHero> */}
             <FullWidthGrid />
             <Galeria />
             <ContactForm />

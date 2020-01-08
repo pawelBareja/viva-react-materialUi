@@ -82,7 +82,7 @@ export default function FullWidthGrid() {
               </Paper>
             </Grid>
             <Grid item xs={12} md={8}>
-              <Paper id={"omnie"} className={classes.paper} style={{ backgroundColor: "#fcb042" }}>
+              <Paper id={"O mnie"} className={classes.paper} style={{ backgroundColor: "#fcb042" }}>
                 <Typography variant="h3" component="h3" style={{ color: "#fff" }}>
                   Hola
             </Typography>
@@ -119,7 +119,7 @@ export default function FullWidthGrid() {
         <section>
           <Grid container spacing={3} className={classes.orderChange}>
             <Grid item xs={12} md={8}>
-              <Paper id={"viva"} className={classes.paper}>
+              <Paper id={"Viva Polonia"} className={classes.paper}>
                 <Typography variant="h3" component="h3">
                   Buen Viaje
             </Typography>
@@ -162,7 +162,7 @@ export default function FullWidthGrid() {
         <section style={{ backgroundColor: "#fcb042" }}>
           <Grid container spacing={3}>
             <Grid item xs={12} md={4}>
-              <Paper id={"oferta"} className={classes.paper} style={{ backgroundColor: "#fcb042" }}>
+              <Paper id={"Oferta"} className={classes.paper} style={{ backgroundColor: "#fcb042" }}>
                 <img style={styleImage} src={gridImage3} />
               </Paper>
             </Grid>

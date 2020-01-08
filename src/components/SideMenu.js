@@ -16,6 +16,7 @@ import FlightTakeoffIcon from '@material-ui/icons/FlightTakeoff';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import ImageIcon from '@material-ui/icons/Image';
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import Link from '@material-ui/core/Link';
 
 
 
@@ -79,12 +80,12 @@ export default function SwipeableTemporaryDrawer() {
                     <ListItem button key={text}>
                         <ListItemIcon>{icons[index].icon}</ListItemIcon>
 
-                        <AnchorLink href='#onas'>
-                            <ListItemText primary={text} />
+                        <AnchorLink href={"#" + text}>
+                            <Link>
+                                <ListItemText primary={text} />
+                            </Link>
                         </AnchorLink>
                     </ListItem>
-
-
                 ))}
             </List>
 
@@ -94,7 +95,11 @@ export default function SwipeableTemporaryDrawer() {
                 {['Kontakt'].map((text, index) => (
                     <ListItem button key={text}>
                         <ListItemIcon><MailIcon /></ListItemIcon>
-                        <ListItemText primary={text} />
+                        <AnchorLink href='#Kontakt'>
+                            <Link>
+                                <ListItemText primary={text} />
+                            </Link>
+                        </AnchorLink >
 
                     </ListItem>
                 ))}
@@ -105,16 +110,17 @@ export default function SwipeableTemporaryDrawer() {
 
     return (
         <div>
-            <Button onClick={toggleDrawer('left', true)}>
+            <Button onClick={toggleDrawer('right', true)}>
                 <MenuIcon />
                 Menu</Button>
 
             <SwipeableDrawer
-                open={state.left}
-                onClose={toggleDrawer('left', false)}
-                onOpen={toggleDrawer('left', true)}
+                anchor="right"
+                open={state.right}
+                onClose={toggleDrawer('right', false)}
+                onOpen={toggleDrawer('right', true)}
             >
-                {sideList('left')}
+                {sideList('right')}
             </SwipeableDrawer>
 
         </div>
