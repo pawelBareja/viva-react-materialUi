@@ -1,4 +1,5 @@
 import React from 'react'
+import Wave from 'react-wavify'
 import CssBaseline from "@material-ui/core/CssBaseline"
 import Container from '@material-ui/core/Container'
 import Topbar from './components/Topbar'
@@ -40,9 +41,15 @@ function App() {
         <div>
           <Container id={"Start"} maxWidth="xl" style={{ backgroundColor: "#fff" }}>
             <Header />
-            {/* <LazyHero imageSrc={image}>
-              <h1>Generic Startup Hype Headline</h1>
-            </LazyHero> */}
+            <Wave fill="url(#gradient)">
+  <defs>
+    <linearGradient id="gradient" gradientTransform="rotate(90)">
+      <stop offset="10%"  stopColor="#d4af37" />
+      <stop offset="90%" stopColor="#f00" />
+    </linearGradient>
+  </defs>
+</Wave>
+
             <FullWidthGrid />
             <Galeria />
             <ContactForm />

@@ -1,53 +1,54 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import React from "react";
+import Typography from "@material-ui/core/Typography";
+import Grid from "@material-ui/core/Grid";
+import Paper from "@material-ui/core/Paper";
+import ButtonBase from "@material-ui/core/ButtonBase";
+import image from "../assets/images/conrado.png";
 
-const useStyles = makeStyles({
-    card: {
-        minWidth: 275,
-    },
-    bullet: {
-        display: 'inline-block',
-        margin: '0 2px',
-        transform: 'scale(0.8)',
-    },
-    title: {
-        fontSize: 14,
-    },
-    pos: {
-        marginBottom: 12,
-    },
-});
+const style = {
+  section: {
+    width: "100%",
+    height: "90vh",
+    border: "1px solid red",
+    display: "flex",
+    flexDirection: "row"
+  },
+  boxLeft: {
+    position: "relative",
+    width: "40%",
+    border: "1px solid blue"
+  },
+  boxRight: {
+    position: "relative",
+    width: "60%",
+    border: "1px solid green"
+  },
+  image: {
+    position: "absolute",
+    bottom: "0",
+    right: "0",
+    width: "100%",
+    maxWidth: "100%",
+    height: "auto"
+  }
+};
 
 export default function Header() {
-    const classes = useStyles();
-    const bull = <span className={classes.bullet}>•</span>;
-
-    return (
-        <Card className={classes.card}>
-            <CardContent>
-                <Typography className={classes.title} color="textSecondary" gutterBottom>
-                    Word of the Day
-        </Typography>
-                <Typography variant="h5" component="h2">
-                    be{bull}nev{bull}o{bull}lent
-        </Typography>
-                <Typography className={classes.pos} color="textSecondary">
-                    adjective
-        </Typography>
-                <Typography variant="body2" component="p">
-                    well meaning and kindly.
-          <br />
-                    {'"a benevolent smile"'}
-                </Typography>
-            </CardContent>
-            <CardActions>
-                <Button size="small">Learn More</Button>
-            </CardActions>
-        </Card>
-    );
+  return (
+    <>
+      <section style={style.section}>
+        <div style={style.boxLeft}>
+          <Typography variant="h1" component="h1">
+            h1 heading
+          </Typography>
+          <Typography variant="h3" component="h3">
+            h3 cos tam
+          </Typography>
+        </div>
+        <div style={style.boxRight}>
+          <img style={style.image} src={image} alt={"Conrado"} />
+        </div>
+      </section>
+    </>
+  );
 }

@@ -1,26 +1,27 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
+import IconButton from "@material-ui/core/IconButton";
 import logo from "../assets/images/logo.png";
 
-import SideMenu from './SideMenu';
+import SideMenu from "./SideMenu";
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
+    backgroundColor: "#fff"
   },
   menuButton: {
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(2)
   },
   title: {
-    flexGrow: 1,
+    flexGrow: 1
   },
   logo: {
-    padding: "5px",
+    padding: "5px"
   }
 }));
 
@@ -29,8 +30,11 @@ export default function ButtonAppBar() {
 
   return (
     <div className={classes.root}>
-
-      <AppBar position="sticky" color="#fff">
+      <AppBar
+        position="sticky"
+        color="#fff"
+        style={{ background: "transparent", boxShadow: "none" }}
+      >
         <Toolbar>
           <img src={logo} alt="logo" className={classes.logo} />
 
@@ -39,7 +43,6 @@ export default function ButtonAppBar() {
             <SideMenu />
           </Button>
           {/* </IconButton> */}
-
         </Toolbar>
       </AppBar>
     </div>
